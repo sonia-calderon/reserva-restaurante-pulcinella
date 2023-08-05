@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+}
+
+.left{
+    background-image: url("../img/pizza-01.jpg");
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 50%;
+    height: 100vh;
+}
+
+/*.left.modif {
+    background-image: none;
+    background-color: #1f2a36;
+}*/
+
+.right {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    width: 85%;
+}
+
+.logo-pulcinella {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+form {
+    width: 75%;
+}
+
+.btn {
+    width: 100%;
+    background-color: #1f2a36;
+    border: 0.5px solid #1f2a36;
+}
+
+.btn:hover {
+    border: 0.5px solid #1f2a36;
+    background-color: white;
+    color: #1f2a36;
+}
+
+/* CONFIRMATION PAGE */
+
+.main-confirmation {
+    height: 100vh;
+    width: 100%;
+    background-color: #1f2a36;
+}
+
+.section-confirmation {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;  
+}
+
+.top {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo-pulcinella-confirmation {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.main {
+    color: white;
+}
+
+div.main p {
+    margin: 20px 0;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.btn-confirmation {
+    width: 50%;
+    background-color: white;
+    border: 0.5px solid white;
+}
+
+.btn-confirmation:hover {
+    border: 0.5px solid white;
+    background-color: #1f2a36;
+    color: white;
+}
+
+.btn-confirmation.cancelation {
+    background-color: #1f2a36;
+    color: white;
+    border: 0.5px solid #1f2a36;
+}
+
+.btn-confirmation.cancelation:last-child{
+    background-color: #dc3545;;
+    border: 0.5px solid #dc3545;;
+}
+
+.btn-confirmation.cancelation:hover {
+    background-color: white;
+    color: #1f2a36;
+}
+
+/* modal*/
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: #1f2a36;
+    
+  }
+  
+/* Modal Content/Box */
+.modal-content{
+    background-color: white;
+    width: 70%;
+    margin: 15% auto;
+    padding: 20px;
+    border: 0.5px solid white;
+}
+  
+  /* The Close Button 
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }*/
+
+  .close{
+    color: #1f2a36;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
