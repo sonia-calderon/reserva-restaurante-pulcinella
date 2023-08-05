@@ -2,7 +2,7 @@
 
 class Conexion extends PDO{
     private $host = "localhost";
-    private $db = "restaurante_italiano";
+    private $db = "reserva_restaurante_pulcinella";
     private $user = "root";
     private $pass = "";
     private $type = "mysql";
