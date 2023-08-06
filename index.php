@@ -33,6 +33,9 @@
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
                         </select>
                         <label for="floatingSelect">Número de personas</label>
                     </div>
@@ -42,7 +45,21 @@
                             <label for="floatingInput">Fecha</label>
                         </div>
                         <div class="form-floating col-md">
-                            <input type="time" class="form-control" id="time" name="time" placeholder="Hora">
+                            <select class="form-select" id="time" name="time">
+                                <option selected>Seleccione la hora</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                                <option value="21:30">21:30</option>
+                                <option value="22:00">22:00</option>
+                                <option value="22:30">22:30</option>
+                            </select>
                             <label for="floatingInput">Hora</label>
                         </div>
                     </div>

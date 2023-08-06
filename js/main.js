@@ -98,7 +98,7 @@ if(cancel){
         fetch("./php/controllerCancelar.php?uniqueId="+uniqueIdValue)
             .then((response) => response)
             .then((info) => {
-                window.location.replace("./cancelar.php");
+                window.location.replace("./cancelar.php?uniqueId="+uniqueIdValue);
             })
     })
 }

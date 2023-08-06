@@ -26,11 +26,6 @@ body {
     height: 100vh;
 }
 
-/*.left.modif {
-    background-image: none;
-    background-color: #1f2a36;
-}*/
-
 .right {
     width: 50%;
     height: 100vh;
@@ -109,6 +104,7 @@ div.main p {
 .btns {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -122,6 +118,10 @@ div.main p {
     border: 0.5px solid white;
     background-color: #1f2a36;
     color: white;
+}
+
+#btn-reserve {
+    width: 100%;
 }
 
 .btn-confirmation.cancelation {
@@ -165,13 +165,7 @@ div.main p {
     border: 0.5px solid white;
 }
   
-  /* The Close Button 
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }*/
+  /* The Close Button*/
 
   .close{
     color: #1f2a36;
