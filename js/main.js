@@ -31,8 +31,6 @@ if(btnReservar){
         })
             .then((response) => response)
             .then((info) => {
-                //console.log(info)
-                //necesito enviar el idCliente
                 window.location.replace("./confirmacion.php?name="+nameValue+"&lastname="+lastnameValue+"&email="+emailValue+"&numPeople="+numPeopleValue+"&date="+dateValue+"&time="+timeValue+"&uniqueId="+uniqueIdValue);
             })
     })
@@ -56,13 +54,10 @@ if(btnModificar){
         })
             .then((response) => response)
             .then((info) => {
-                //console.log(info)
                 window.location.replace("./confirmacion-modificar.php?name="+nameValue+"&lastname="+lastnameValue+"&email="+emailValue+"&numPeople="+numPeopleValue+"&date="+dateValue+"&time="+timeValue+"&uniqueId="+uniqueIdValue);
             })
     })
 }
-
-
 
 
 if(btnCancelar){
@@ -90,7 +85,7 @@ window.onclick = function(event) {
   }
 }
 
-
+// When clicking cancel, it redirect to the cancelar page
 if(cancel){
     cancel.addEventListener("click", (e) => {
         e.preventDefault();
@@ -99,14 +94,11 @@ if(cancel){
         const urlParams = new URLSearchParams(valores);
         //Accedemos a los valores
         var uniqueIdValue = urlParams.get('uniqueId');
-        //console.log(uniqueIdValue)
 
-        fetch("./php/controllerCancelar.php")
+        fetch("./php/controllerCancelar.php?uniqueId="+uniqueIdValue)
             .then((response) => response)
             .then((info) => {
-                console.log(info)
-                //falta que funcione el método de cancelar
-                window.location.replace("./cancelar.php?uniqueId="+uniqueIdValue);
+                window.location.replace("./cancelar.php");
             })
     })
 }

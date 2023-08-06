@@ -32,7 +32,6 @@
                 return $result;
                 //var_dump($result) ;
             }
-            //var_dump($result) ;
         }
 
         public function cancelarReserva($reservaCancelada, $id, $con){
@@ -44,7 +43,6 @@
                 return $result;
                 //var_dump($result) ;
             }
-            //var_dump($result) ;
         }
     }
 
@@ -68,6 +66,4 @@
     $conex = new Conexion();
     $client = new Cliente();
     $client->cancelarReserva(1, 8498, $conex);*/
-    
-
 ?>

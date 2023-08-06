@@ -5,6 +5,5 @@
     $conex = new Conexion();
     $client = new Cliente();
     
-    $client->cancelarReserva(1, $_GET["uniqueId"], $conex);
-   
+    $client->cancelarReserva(1, $_GET["uniqueId"], $conex); 
 ?>
