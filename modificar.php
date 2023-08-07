@@ -17,16 +17,16 @@
                 <form action="./php/controllerModificar.php" class="form" method="POST">
                     <input type="hidden" id="hidden" value="<?php echo $result["uniqueId"]; ?>" name="uniqueId">
                     <div class="form-floating mb-3">
-                        <input type="name" class="form-control" id="name" name="name" placeholder="Nombre" value="<?php echo $result["nombre"] ?>">
+                        <input type="name" class="form-control" id="name" name="name" placeholder="Nombre" value="<?php echo $result["nombre"] ?>" disabled>
                         <label for="floatingInput">Nombre</label>
                     </div>
                     
                     <div class="form-floating mb-3">
-                        <input type="name" class="form-control" id="lastname" name="lastname" placeholder="Apellidos" value="<?php echo $result["apellidos"] ?>">
+                        <input type="name" class="form-control" id="lastname" name="lastname" placeholder="Apellidos" value="<?php echo $result["apellidos"] ?>" disabled>
                         <label for="floatingInput">Apellidos</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="hola@ejemplo.com" value="<?php echo $result["email"] ?>">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="hola@ejemplo.com" value="<?php echo $result["email"] ?>" disabled>
                         <label for="floatingInput">Email</label>
                     </div>
                     <div class="form-floating mb-3">
@@ -45,7 +45,21 @@
                             <label for="floatingInput">Fecha</label>
                         </div>
                         <div class="form-floating col-md">
-                            <input type="time" class="form-control" id="time" name="time" placeholder="Hora" value="<?php echo $result["hora"] ?>">
+                            <select class="form-select" id="time" name="time">
+                                <option selected><?php echo substr($result["hora"], 0, 5);?></option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                                <option value="21:30">21:30</option>
+                                <option value="22:00">22:00</option>
+                                <option value="22:30">22:30</option>
+                            </select>
                             <label for="floatingInput">Hora</label>
                         </div>
                     </div>

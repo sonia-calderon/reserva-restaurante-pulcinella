@@ -9,7 +9,7 @@
             <img src="./img/pulcinella-logo-black.png" alt="" class="logo-pulcinella-confirmation">  
         </div>
         <div class="main">
-            <h1>Hemos cancelado tu reserva, <?php echo $_GET["uniqueId"]; ?></h1>
+            <h1>Hemos cancelado tu reserva número <?php echo $_GET["uniqueId"]; ?></h1>
             <p>¡Esperamos verte pronto!</p>
             <div class="btns">
                 <a href="./index.php" class="btn btn-confirmation" id="btn-reserve">Hacer una nueva reserva</a>

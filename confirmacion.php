@@ -14,7 +14,7 @@
             <p>¡Nos vemos pronto!</p>
             <div class="btns">
                 <a href="./modificar.php?id=<?php echo $_GET["uniqueId"]; ?>" class="btn btn-confirmation">Modificar Reserva</a>
-                <a href="#" class="btn btn-confirmation" id="btn-cancelar">Cancelar Reserva</a>
+                <a href="#" class="btn btn-confirmation cancelation" id="btn-cancelar">Cancelar Reserva</a>
             </div>
         </div>
         <!-- The Modal -->

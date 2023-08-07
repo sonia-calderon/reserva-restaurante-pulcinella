@@ -23,10 +23,10 @@
             }
         }
 
-        public function modificarReserva($fecha, $hora, $id, $con){
-            $sql = "UPDATE reservas SET fecha = :fecha, hora = :hora WHERE uniqueId = :id";
+        public function modificarReserva($numPer, $fecha, $hora, $id, $con){
+            $sql = "UPDATE reservas SET numPer = :numPer, fecha = :fecha, hora = :hora WHERE uniqueId = :id";
             $update = $con->prepare($sql);
-            $update->execute(array(":fecha"=>$fecha, ":hora"=>$hora, ":id"=>$id));
+            $update->execute(array(":numPer"=>$numPer, ":fecha"=>$fecha, ":hora"=>$hora, ":id"=>$id));
             if($update->rowCount() == 1){
                 $result = $update->fetch();
                 return $result;
@@ -60,7 +60,7 @@
     include "classConexion.php";
     $conex = new Conexion();
     $client = new Cliente();
-    $client->modificarReserva('2022-02-27', '13:00:00', 4427, $conex);
+    $client->modificarReserva(3, '2022-02-27', '13:00:00', 3156, $conex);
 
     include "classConexion.php";
     $conex = new Conexion();
