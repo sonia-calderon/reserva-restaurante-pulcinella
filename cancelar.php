@@ -12,7 +12,7 @@
             <h1>Hemos cancelado tu reserva número <?php echo $_GET["uniqueId"]; ?></h1>
             <p>¡Esperamos verte pronto!</p>
             <div class="btns">
-                <a href="./index.php" class="btn btn-confirmation" id="btn-reserve">Hacer una nueva reserva</a>
+                <a href="./index.php" class="btn btn-confirmation" id="btn-new-reserve">Hacer una nueva reserva</a>
             </div>
         </div>
     </section>

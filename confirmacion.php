@@ -13,19 +13,25 @@
             <p>Podrás disfrutar de tu mesa para <?php echo $_GET["numPeople"]; ?> personas el día <?php echo $_GET["date"]; ?> a las <?php echo $_GET["time"]; ?></p>
             <p>¡Nos vemos pronto!</p>
             <div class="btns">
-                <a href="./modificar.php?id=<?php echo $_GET["uniqueId"]; ?>" class="btn btn-confirmation">Modificar Reserva</a>
-                <a href="#" class="btn btn-confirmation cancelation" id="btn-cancelar">Cancelar Reserva</a>
+                <a href="./modificar.php?id=<?php echo $_GET["uniqueId"]; ?>" class="btn button btn-confirmation">Modificar Reserva</a>
+                <!--<a href="#" class="btn btn-confirmation cancelation" id="btn-cancelar">Cancelar Reserva</a>-->
+                <button type="button" class="btn button btn-confirmation cancelation" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="btn-cancelar">Cancelar Reserva</button>
             </div>
         </div>
-        <!-- The Modal -->
-        <div id="modal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Estás a punto de cancelar tu reserva</p>
-                <div class="btns">
-                    <a href="#" class="btn btn-confirmation cancelation" id="back">Volver</a>
-                    <a href="#" class="btn btn-confirmation cancelation" id="cancel">Cancelar Reserva</a>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Estás a punto de cancelar tu reserva</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-confirmation cancelation" data-bs-dismiss="modal">Volver</button>
+                        <button type="button" class="btn btn-confirmation cancelation" id="cancel">Cancelar Reserva</button>
+                    </div>
                 </div>
             </div>
         </div>

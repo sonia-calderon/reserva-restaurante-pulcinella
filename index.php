@@ -64,10 +64,9 @@
                         </div>
                     </div>
                     <div class="form-floating mb-3">
-                        <button type="submit" class="btn btn-primary" id="btn-reservar">Reservar</button>
+                        <button type="submit" class="btn button btn-primary" id="btn-reservar">Reservar</button>
                     </div>
-                </form>
-                
+                </form>    
             </div>
         </div>        
     </section>

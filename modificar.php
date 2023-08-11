@@ -20,7 +20,6 @@
                         <input type="name" class="form-control" id="name" name="name" placeholder="Nombre" value="<?php echo $result["nombre"] ?>" disabled>
                         <label for="floatingInput">Nombre</label>
                     </div>
-                    
                     <div class="form-floating mb-3">
                         <input type="name" class="form-control" id="lastname" name="lastname" placeholder="Apellidos" value="<?php echo $result["apellidos"] ?>" disabled>
                         <label for="floatingInput">Apellidos</label>
@@ -66,7 +65,7 @@
                         </div>
                     </div>
                     <div class="form-floating mb-3">
-                        <button type="submit" class="btn btn-primary" id="btn-modificar">Modificar</button>
+                        <button type="submit" class="btn button btn-primary" id="btn-modificar">Modificar</button>
                     </div>
                 </form>
             </div>
