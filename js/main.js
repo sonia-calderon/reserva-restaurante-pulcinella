@@ -12,10 +12,86 @@ const modal = document.querySelector("#modal");
 const span = document.querySelector(".close");
 const back = document.querySelector("#back");
 const cancel = document.querySelector("#cancel");
+const form = document.querySelector('.form');
+const inputs = document.querySelectorAll('input');
+const selects = document.querySelectorAll('select');
+
+const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+const inputsValidation = (e) => {
+    if(e.target.name === 'email'){
+        if(e.target.value.match(emailRegex)){
+            e.target.classList.add('is-valid')
+            e.target.classList.remove('is-invalid')
+        }else{
+            e.target.classList.add('is-invalid')
+            e.target.classList.remove('is-valid')        
+        }
+    }else if(e.target.name === 'date'){
+        const parts = e.target.value.split('-');
+        const day = parseInt(parts[2]);
+        const month = parseInt(parts[1] - 1);
+        const year = parseInt(parts[0]);
+
+        const inputDate = new Date(year, month, day);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        if(inputDate.getTime() >= today.getTime()){
+            e.target.classList.add('is-valid')
+            e.target.classList.remove('is-invalid')
+        }else{
+            e.target.classList.add('is-invalid')
+            e.target.classList.remove('is-valid') 
+        }
+    }else{
+        if(e.target.value === '' || e.target.value === 'default'){
+            e.target.classList.add('is-invalid')
+            e.target.classList.remove('is-valid')
+        }else{
+            e.target.classList.add('is-valid')
+            e.target.classList.remove('is-invalid')
+        }
+    }
+}
+
+const validateForm = (e) => {
+    switch (e.target.name) {
+		case "name":
+            inputsValidation(e);
+		break;
+		case "lastname":
+            inputsValidation(e);
+		break;
+        case "email":
+            inputsValidation(e);
+		break;
+		case "numPeople":
+            inputsValidation(e);
+		break;
+        case "date":
+            inputsValidation(e);
+		break;
+		case "time":
+            inputsValidation(e);
+		break;
+    }
+}
 
 if(btnReservar){
-    btnReservar.addEventListener("click", (e) => {
+        inputs.forEach((input)=>{
+            input.addEventListener('keyup', validateForm);
+            input.addEventListener('blur', validateForm);
+        })
+
+        selects.forEach((select)=>{
+            select.addEventListener('keyup', validateForm);
+            select.addEventListener('blur', validateForm);
+        })
+
+    form.addEventListener("submit", (e) => {
         e.preventDefault();
+
         const nameValue = name.value;
         const lastnameValue = lastname.value;
         const emailValue = email.value;
@@ -23,22 +99,23 @@ if(btnReservar){
         const dateValue = date.value;
         const timeValue = time.value;
         const uniqueIdValue = uniqueId.value;
-    
+
         const cliente = new FormData(document.querySelector(".form"));
-        fetch("./php/controller.php", {
-            method: "POST",
-            body: cliente
-        })
-            .then((response) => response)
-            .then((info) => {
-                window.location.replace("./confirmacion.php?name="+nameValue+"&lastname="+lastnameValue+"&email="+emailValue+"&numPeople="+numPeopleValue+"&date="+dateValue+"&time="+timeValue+"&uniqueId="+uniqueIdValue);
+            fetch("./php/controller.php", {
+                method: "POST",
+                body: cliente
             })
+                .then((response) => response)
+                .then((info) => {
+                    window.location.replace("./confirmacion.php?name="+nameValue+"&lastname="+lastnameValue+"&email="+emailValue+"&numPeople="+numPeopleValue+"&date="+dateValue+"&time="+timeValue+"&uniqueId="+uniqueIdValue);
+                })      
     })
 }
 
 if(btnModificar){
-    btnModificar.addEventListener("click", (e) => {
+    form.addEventListener("submit", (e) => {
         e.preventDefault();
+
         const nameValue = name.value;
         const lastnameValue = lastname.value;
         const emailValue = email.value;
@@ -63,8 +140,7 @@ if(btnModificar){
 if(btnCancelar){
     btnCancelar.addEventListener("click", (e) => {
         modal.style.display = "block";
-    })
-    
+    })  
 }
 
 if(span || back){

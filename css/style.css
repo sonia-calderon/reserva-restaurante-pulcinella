@@ -17,7 +17,7 @@ body {
 }
 
 .left{
-    background-image: url("../img/pizza-01.jpg");
+    background-image: url("../img/pizza.jpg");
     background-position: 100% 0%;
     background-repeat: no-repeat;
     background-attachment: fixed;

@@ -31,11 +31,13 @@
                     </div>
                     <div class="form-floating mb-3">
                         <select class="form-select" id="numPeople" name="numPeople">
-                            <option>Seleccione número de personas</option>
                             <option selected value="<?php echo $result["numPer"] ?>"><?php echo $result["numPer"] ?></option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
                         </select>
                         <label for="floatingSelect">Número de personas</label>
                     </div>

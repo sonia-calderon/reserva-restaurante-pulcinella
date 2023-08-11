@@ -16,20 +16,20 @@
                     ?>
                     <input type="hidden" id="hidden" value="<?php echo $random; ?>" name="uniqueId">
                     <div class="form-floating mb-3">
-                        <input type="name" class="form-control" id="name" name="name" placeholder="Nombre">
+                        <input type="name" class="form-control" id="name" name="name" placeholder="Nombre" required>
                         <label for="floatingInput">Nombre</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="name" class="form-control" id="lastname" name="lastname" placeholder="Apellidos">
+                        <input type="name" class="form-control" id="lastname" name="lastname" placeholder="Apellidos" required>
                         <label for="floatingInput">Apellidos</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="hola@ejemplo.com">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="hola@ejemplo.com" required>
                         <label for="floatingInput">Email</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <select class="form-select" id="numPeople" name="numPeople">
-                            <option selected>Seleccione número de personas</option>
+                        <select class="form-select" id="numPeople" name="numPeople" required>
+                            <option selected value="default">Seleccione número de personas</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -41,12 +41,12 @@
                     </div>
                     <div class="form-floating row g-2 mb-3">
                         <div class="form-floating col-md">
-                            <input type="date" class="form-control" id="date" name="date" placeholder="Fecha">
+                            <input type="date" class="form-control" id="date" name="date" placeholder="Fecha" required>
                             <label for="floatingInput">Fecha</label>
                         </div>
                         <div class="form-floating col-md">
-                            <select class="form-select" id="time" name="time">
-                                <option selected>Seleccione la hora</option>
+                            <select class="form-select" id="time" name="time" required>
+                                <option selected value="default">Seleccione la hora</option>
                                 <option value="13:00">13:00</option>
                                 <option value="13:30">13:30</option>
                                 <option value="14:00">14:00</option>
