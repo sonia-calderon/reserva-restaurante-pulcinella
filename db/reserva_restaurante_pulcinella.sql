@@ -39,18 +39,6 @@ CREATE TABLE `reservas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `reservas`
---
-
-INSERT INTO `reservas` (`idCliente`, `nombre`, `apellidos`, `email`, `numPer`, `fecha`, `hora`, `uniqueId`) VALUES
-(1, 'Sonia', 'Calderon Ruiz', 'soniacalderonruiz@hotmail.com', 3, '2022-02-27', '13:00:00', 1234),
-(2, 'test', 'test', 'test@test.es', 1, '2023-08-05', '12:02:00', 9699);
-
---
--- Índices para tablas volcadas
---
-
---
 -- Indices de la tabla `reservas`
 --
 ALTER TABLE `reservas`
@@ -64,7 +52,7 @@ ALTER TABLE `reservas`
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
