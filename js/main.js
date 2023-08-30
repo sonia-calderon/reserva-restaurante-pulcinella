@@ -13,7 +13,6 @@ const uniqueId = document.querySelector("#hidden");
 //buttons
 const reserveBtn = document.querySelector("#btn-reservar");
 const modifyBtn = document.querySelector("#btn-modificar");
-const cancelBtn = document.querySelector("#btn-cancelar");
 const finalCancelBtn = document.querySelector("#cancel");
 
 const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -51,7 +50,7 @@ const inputsValidation = (e) => {
     }
     //remaining imputs validation
     else{
-        if(e.target.value === '' || e.target.value === 'default'){
+        if(e.target.value === ''){
             e.target.classList.add('is-invalid')
             e.target.classList.remove('is-valid')
         }else{
@@ -147,14 +146,12 @@ if(modifyBtn){
     })
 }
 
-// When clicking cancel, it redirect to the cancelar page
+// When clicking cancel, it redirects to the cancelar page
 if(finalCancelBtn){
     finalCancelBtn.addEventListener("click", (e) => {
         e.preventDefault();
         const valores = window.location.search;
-        //Creamos la instancia
         const urlParams = new URLSearchParams(valores);
-        //Accedemos a los valores
         var uniqueIdValue = urlParams.get('uniqueId');
 
         fetch("./php/controllerCancelar.php?uniqueId="+uniqueIdValue)

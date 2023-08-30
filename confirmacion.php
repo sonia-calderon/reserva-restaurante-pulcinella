@@ -14,7 +14,6 @@
             <p>¡Nos vemos pronto!</p>
             <div class="btns">
                 <a href="./modificar.php?id=<?php echo $_GET["uniqueId"]; ?>" class="btn button btn-confirmation">Modificar Reserva</a>
-                <!--<a href="#" class="btn btn-confirmation cancelation" id="btn-cancelar">Cancelar Reserva</a>-->
                 <button type="button" class="btn button btn-confirmation cancelation" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="btn-cancelar">Cancelar Reserva</button>
             </div>
         </div>

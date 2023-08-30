@@ -29,7 +29,7 @@
                     </div>
                     <div class="form-floating mb-3">
                         <select class="form-select" id="numPeople" name="numPeople" required>
-                            <option selected value="default">Seleccione número de personas</option>
+                            <option selected value="">Seleccione número de personas</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -46,7 +46,7 @@
                         </div>
                         <div class="form-floating col-md">
                             <select class="form-select" id="time" name="time" required>
-                                <option selected value="default">Seleccione la hora</option>
+                                <option selected value="">Seleccione la hora</option>
                                 <option value="13:00">13:00</option>
                                 <option value="13:30">13:30</option>
                                 <option value="14:00">14:00</option>
